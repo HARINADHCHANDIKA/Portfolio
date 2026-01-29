@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandika Harinadh | DevOps Engineer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --text-color: #e5e7eb;
+      --primary: #38bdf8;
+      --secondary: #6366f1;
+      --card-bg: #020617;
+    }
+
+    body.light {
+      --bg-color: #f8fafc;
+      --text-color: #020617;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav h1 {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .toggle {
+      cursor: pointer;
+      background: var(--primary);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      color: #020617;
+      font-weight: 600;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 2rem 2rem; /* Reduced top and bottom spacing */
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .typing {
+      color: var(--primary);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem; /* Reduced heading spacing */
+      color: var(--primary);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+    }
+
+    .skills span {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      margin: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    .contact a {
+      display: block;
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+
+      .typing {
+        font-size: 1.2rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+      @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    
+
+</style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <h1>Harinadh</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="toggle" onclick="toggleTheme()">Toggle Mode</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>CHANDIKA HARINADH</h2>
+    <div class="typing" id="typing"></div>
+    <p>
+      Enthusiastic and detail-oriented Computer Science under graduate aspiring to build a career in DevOps , IT and Cloud Engineering.
+Strong foundation in cloud platforms (Azure & AWS), automation tools, and programming. Eager to apply problem-solving and
+continuous learning mindset to contribute effectively to dynamic IT environments.
+    </p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h3>About Me</h3>
+    <div class="card">
+      <p>
+        I am a Computer Science graduate from Sri Vasavi Institute of Engineering and Technology with a
+        strong passion for Cloud and DevOps engineering. I enjoy working with cloud platforms like
+        AWS and Azure, building CI/CD pipelines, automating infrastructure using Terraform, and
+        continuously improving system performance and reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h3>Education</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>B.Tech in Computer Science</h4>
+        <p><strong>Sri Vasavi Institute of Engineering and Technology</strong>, Nandamuru</p>
+        <p>Dec 2021 – Apr 2025</p>
+        <p>Score: <strong>79%</strong></p>
+      </div>
+
+      <div class="card">
+        <h4>Intermediate (M.P.C)</h4>
+        <p><strong>R.K Junior College</strong>, Machilipatnam</p>
+        <p>2019 – 2021</p>
+        <p>Score: <strong>95%</strong></p>
+      </div>
+
+      <div class="card">
+        <h4>SSC</h4>
+        <p><strong>Bhavishya Techno School</strong>, Machilipatnam</p>
+        <p>Completed: Mar 2019</p>
+        <p>Score: <strong>90%</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="card skills">
+      <span>AWS</span>
+      <span>Azure</span>
+      <span>Docker</span>
+      <span>Kubernetes</span>
+      <span>Terraform</span>
+      <span>CI/CD Pipelines</span>
+      <span>Azure DevOps</span>
+      <span>Git</span>
+      <span>Python</span>
+      <span>C</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Networking Fundamentals</span>
+    </div>
+      <hr />
+      
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="grid">
+      <div class="card" style="animation: float 4s ease-in-out infinite;">
+        <img src="https://via.placeholder.com/300x150" alt="ML Project" style="width:100%; border-radius:12px; margin-bottom:1rem;" />
+        <h4>Bank Customer Inactive Prediction</h4>
+        <p>
+          Built a machine learning model to analyze bank customer inactivity using transaction
+          history, demographics, and account activity. Applied EDA and ML techniques to identify
+          patterns and help improve customer retention strategies.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Terraform Infrastructure Deployment</h4>
+        <p>
+          Automated full infrastructure deployment including Resource Groups, VNets, Subnets, Public
+          IPs, NICs, and Virtual Machines using Terraform modules and variable-based architecture.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4>Azure DevOps CI/CD Pipeline</h4>
+        <p>
+          Implemented end-to-end CI/CD for a .NET application. Managed code in Azure Repos, enabled
+          pull requests, automated container image build and push to Azure Container Registry, and
+          deployed continuously to Azure App Services.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h3>Certifications & Training</h3>
+    <div class="grid">
+      <div class="card">
+        🏅 AWS Cloud – AICTE & EduSkills (2024)
+      </div>
+      <div class="card">
+        🏅 Multi-Cloud (Azure & AWS) with DevOps
+      </div>
+      <div class="card">
+        🏅 Python Programming – Online Certification
+      </div>
+      <div class="card">
+        🏅 Power BI – BIST Technologies
+      </div>
+      <div class="card">
+        🏅 Full Stack Web Development – Edvedha
+      </div>
+      <div class="card">
+        🏅 Cloud Engineering & DevOps – DataValley
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <div class="card contact">
+      <a href="mailto:chandikaharinadh4@gmail.com">📧 chandikaharinadh4@gmail.com</a>
+      <a href="tel:+919346581766">📞 +91 93465 81766</a>
+      <a href="https://github.com/HARINADHCHANDIKA" target="_blank">💻 GitHub</a>
+      <a href="https://www.linkedin.com/in/harinadh-chandika-5857102a8" target="_blank">🔗 LinkedIn</a>
+      <p>📍 Machilipatnam, Andhra Pradesh, India</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Chandika Harinadh | DevOps Engineer Portfolio</p>
+  </footer>
+
+  <script>
+    const roles = [
+      "DevOps Engineer",
+      "Cloud Engineer | AWS & Azure",
+      "CI/CD & Automation Enthusiast",
+      "Terraform & Kubernetes Learner"
+    ];
+
+    let i = 0;
+    let j = 0;
+    let current = "";
+    let isDeleting = false;
+
+    function typeEffect() {
+      const typing = document.getElementById("typing");
+
+      if (!isDeleting && j <= roles[i].length) {
+        current = roles[i].substring(0, j++);
+      }
+
+      if (isDeleting && j >= 0) {
+        current = roles[i].substring(0, j--);
+      }
+
+      typing.textContent = current;
+
+      if (j === roles[i].length) {
+        isDeleting = true;
+        setTimeout(() => {}, 1000);
+      }
+
+      if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i + 1) % roles.length;
+      }
+
+      setTimeout(typeEffect, isDeleting ? 80 : 120);
+    }
+
+    typeEffect();
+
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+    }
+  </script>
+
+</body>
+</html>
