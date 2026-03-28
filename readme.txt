@@ -1,2 +1,2 @@
 This is my portfolio
-for the the devops
+for the the Devops
